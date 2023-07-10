@@ -6,6 +6,7 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
+ * main: Write a program that copies the content of a file to another file.
  * create_buffer - Allocates 1024 bytes that used on buffer.
  * @file: The name of the file buffer is storing chars for.
  *
