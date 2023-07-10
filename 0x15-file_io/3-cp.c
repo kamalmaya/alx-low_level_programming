@@ -6,11 +6,10 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * main: Write a program that copies the content of a file to another file.
- * create_buffer - Allocates 1024 bytes that used on buffer.
+ * create_buffer - Allocates 1024 bytes for a buffer.
  * @file: The name of the file buffer is storing chars for.
  *
- * Return: A pointer to the newly-allocated for the  buffer.
+ * Return: A pointer to the newly-allocated buffer.
  */
 char *create_buffer(char *file)
 {
@@ -29,16 +28,16 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Closes the file descriptors.
- * @fd: The file descriptor is closed.
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
 {
-	int ola;
+	int c;
 
-	ola = close(fd);
+	c = close(fd);
 
-	if (ola == -1)
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -46,9 +45,9 @@ void close_file(int fd)
 }
 
 /**
- * main we will co^pies the content of the phile to an other file.
- * @argc:is the number of the argiment that used to suply.
- * @argv: is An array of pointers to the arguments.
+ * main - Copies the contents of a file to another file.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: 0 on success.
  *
